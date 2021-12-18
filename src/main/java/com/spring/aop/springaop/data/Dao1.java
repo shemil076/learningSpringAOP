@@ -1,10 +1,12 @@
 package com.spring.aop.springaop.data;
 
+import com.spring.aop.springaop.aspect.TrackTime;
 import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
 
 @Repository
 public class Dao1 {
+
+    @TrackTime
     public String retrieveSomething(){
         return "Dao1";
     }

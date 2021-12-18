@@ -17,7 +17,7 @@ public class AfterAspect {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @AfterReturning(
-            value = "execution(* com.spring.aop.springaop.Business.*.*(..))",
+            value = "com.spring.aop.springaop.aspect.CommonJoinPointConfig.businessDataLayerExecution()",
             returning ="result"
     )
     public void after(JoinPoint joinPoint, Object result) {

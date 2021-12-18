@@ -15,7 +15,7 @@ public class BeforeAspect {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Before( "execution(* com.spring.aop.springaop.data.*.*(..))")
+    @Before( "com.spring.aop.springaop.aspect.CommonJoinPointConfig.dataDataLayerExecution()")
     public void before(JoinPoint joinPoint) {
         logger.info(" Check for user access ");
         logger.info(" Allowed execution for {}", joinPoint);

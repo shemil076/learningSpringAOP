@@ -15,8 +15,9 @@ public class BeforeAspect {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Before( "execution(* com.spring.aop.springaop.Business.*.*(..))")
+    @Before( "execution(* com.spring.aop.springaop.data.*.*(..))")
     public void before(JoinPoint joinPoint) {
-        logger.info("Intercepted Method Call - {}", joinPoint);
+        logger.info(" Check for user access ");
+        logger.info(" Allowed execution for {}", joinPoint);
     }
 }

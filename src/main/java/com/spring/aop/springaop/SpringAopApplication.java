@@ -1,6 +1,7 @@
 package com.spring.aop.springaop;
 
 import com.spring.aop.springaop.Business.Business1;
+import com.spring.aop.springaop.Business.Business2;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,7 @@ public class SpringAopApplication implements CommandLineRunner {
 	Business1 business1;
 
 	@Autowired
-	Business1 business2;
+	Business2 business2;
 
 
 	public static void main(String[] args) {
